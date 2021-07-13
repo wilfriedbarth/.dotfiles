@@ -3,6 +3,7 @@
 " ================ "
 
 let mapleader = ","
+let maplocalleader = ","
 set clipboard+=unnamedplus
 set cmdheight=2
 set cursorline
@@ -23,3 +24,6 @@ set signcolumn=yes
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set termguicolors
 set updatetime=300
+set nocompatible
+filetype plugin on
+syntax on

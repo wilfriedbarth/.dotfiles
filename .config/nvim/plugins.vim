@@ -21,6 +21,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'olical/conjure', { 'tag': 'v4.12.0' }
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " ------------------------------ "
@@ -68,6 +70,7 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-tsserver',
       \ 'coc-yaml',
+      \ 'coc-conjure'
       \ ]
 
 " Set coc diagnostic signs to match nova-vim colorscheme
@@ -174,4 +177,15 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"vimwiki
+let g:vimwiki_list = [{
+\'path': '~/vimwiki/', 
+\'auto_diary_index': 1, 
+\'auto_tags': 1, 
+\'auto_generate_tags': 1,
+\'syntax': 'markdown', 
+\'ext': '.md'
+\}]
+autocmd BufEnter diary.md :VimwikiDiaryGenerateLinks
 

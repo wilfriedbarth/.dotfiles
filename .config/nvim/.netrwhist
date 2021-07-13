@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/wilfriedbarth/Programming/oss/jotai/src/utils'
+let g:netrw_dirhist_3='/home/wilfriedbarth/Programming/oss/jotai/examples/todos_with_atomFamily/node_modules/jotai/utils'
+let g:netrw_dirhist_2='/home/wilfriedbarth/Android/Sdk/sources'
+let g:netrw_dirhist_1='/home/wilfriedbarth/.config/fish/functions'
