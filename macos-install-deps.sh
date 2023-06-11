@@ -4,7 +4,7 @@
 
 if [ "$(command -v brew)" = "" ]; then
 	echo "Installing Homebrew"
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
 	echo "Updating Homebrew"
 	brew update
@@ -22,3 +22,4 @@ brew install fish
 brew install starship
 brew install zellij
 brew install neovim
+brew install volta
