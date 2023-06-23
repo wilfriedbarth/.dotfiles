@@ -22,4 +22,5 @@ brew install fish
 brew install starship
 brew install zellij
 brew install neovim
-brew install volta
+brew install fnm
+brew install pyenv
