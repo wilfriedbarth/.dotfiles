@@ -24,3 +24,5 @@ brew install zellij
 brew install neovim
 brew install fnm
 brew install pyenv
+brew tap tj/mmake https://github.com/tj/mmake.git
+brew install tj/mmake/mmake
