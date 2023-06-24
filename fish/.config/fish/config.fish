@@ -22,6 +22,9 @@ alias vim nvim
 set -gx GOPATH (go env GOPATH)
 set -gx PATH $PATH (go env GOPATH)/bin
 
+# alias make to mmake (https://github.com/tj/mmake)
+alias make mmake
+
 # init fnm
 fnm env --use-on-cd | source
 
