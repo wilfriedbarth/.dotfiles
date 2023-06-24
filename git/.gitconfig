@@ -1,7 +1,11 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-name = Wilfried Barth
-email = wilfried.barth.prof@gmail.com 
+  name = Wilfried Barth
+  email = wilfried.barth.prof@gmail.com 
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
