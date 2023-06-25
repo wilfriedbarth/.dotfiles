@@ -29,6 +29,7 @@ brew install neovim
 
 ## Node.js
 brew install fnm
+brew install pnpm
 
 ## Python
 brew install pyenv

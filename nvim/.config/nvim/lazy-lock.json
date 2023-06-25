@@ -44,7 +44,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "9ab9b0b894b2388a9dbcdee5f00ce72e25d85bf9" },
   "persistence.nvim": { "branch": "main", "commit": "4b8051c01f696d8849a5cb8afa9767be8db16e40" },
   "plenary.nvim": { "branch": "master", "commit": "36aaceb6e93addd20b1b18f94d86aecc552f30c4" },
-  "telescope-file-browser.nvim": { "branch": "master", "commit": "87dfaa9a9c251388cf4f01b9d4078c29d1fc8803" },
+  "telescope-file-browser.nvim": { "branch": "master", "commit": "acf2eade45563803afdd4e9873a8481bc98bd726" },
   "telescope.nvim": { "branch": "master", "commit": "219584a6efd32d0478dcd62b501c348bc44d9d43" },
   "todo-comments.nvim": { "branch": "main", "commit": "09b0b17d824d2d56f02ff15967e8a2499a89c731" },
   "tokyonight.nvim": { "branch": "main", "commit": "fd0a005fd8986ec0d98a1938dc570303e8d8444b" },
