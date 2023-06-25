@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BAT_THEME:ansi
 SETUVAR --export PYENV_ROOT:/Users/wilfriedbarth/\x2epyenv
 SETUVAR __fish_initialized:3400
 SETUVAR --export fish_color_autosuggestion:\x23899BA6

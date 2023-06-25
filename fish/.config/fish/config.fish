@@ -25,6 +25,28 @@ set -gx PATH $PATH (go env GOPATH)/bin
 # alias make to mmake (https://github.com/tj/mmake)
 alias make mmake
 
+# alias cat to bat (https://github.com/sharkdp/bat) and setup theme
+alias cat bat
+set -Ux BAT_THEME ansi
+
+# alias du to dust (https://github.com/bootandy/dust)
+alias du dust
+
+# alias ls to exa (https://the.exa.website/)
+alias ls='exa --git --icons --color=always --group-directories-first'
+
+# alias find to fd (https://github.com/sharkdp/fd)
+alias find fd
+
+# alias ps to procs (https://github.com/dalance/procs)
+alias ps procs
+
+# alias sed to sd (https://github.com/chmln/sd)
+alias sed sd
+
+# alias cd to z (https://github.com/ajeetdsouza/zoxide)
+alias cd z
+
 # init fnm
 fnm env --use-on-cd | source
 
@@ -33,6 +55,9 @@ alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 set -Ux PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
 pyenv init - | source
+
+# init zoxide
+zoxide init fish | source
 
 # init starship
 starship init fish | source
