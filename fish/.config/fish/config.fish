@@ -44,9 +44,6 @@ alias ps procs
 # alias sed to sd (https://github.com/chmln/sd)
 alias sed sd
 
-# alias cd to z (https://github.com/ajeetdsouza/zoxide)
-alias cd z
-
 # init fnm
 fnm env --use-on-cd | source
 
@@ -58,6 +55,9 @@ pyenv init - | source
 
 # init zoxide
 zoxide init fish | source
+
+# alias cd to z (https://github.com/ajeetdsouza/zoxide)
+alias cd z
 
 # init starship
 starship init fish | source
