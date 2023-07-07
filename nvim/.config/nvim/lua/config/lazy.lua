@@ -17,52 +17,11 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.editor.flash" },
     -- import/override with your plugins
     { import = "plugins" },
-    {
-      "folke/flash.nvim",
-      event = "VeryLazy",
-      ---@type Flash.Config
-      opts = {},
-      keys = {
-        {
-          "s",
-          mode = { "n", "x", "o" },
-          function()
-            -- default options: exact mode, multi window, all directions, with a backdrop
-            require("flash").jump()
-          end,
-          desc = "Flash",
-        },
-        {
-          "S",
-          mode = { "n", "o", "x" },
-          function()
-            -- show labeled treesitter nodes around the cursor
-            require("flash").treesitter()
-          end,
-          desc = "Flash Treesitter",
-        },
-        {
-          "r",
-          mode = "o",
-          function()
-            -- jump to a remote location to execute the operator
-            require("flash").remote()
-          end,
-          desc = "Remote Flash",
-        },
-        {
-          "R",
-          mode = { "n", "o", "x" },
-          function()
-            -- show labeled treesitter nodes around the search matches
-            require("flash").treesitter_search()
-          end,
-          desc = "Treesitter Search",
-        },
-      },
-    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

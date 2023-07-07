@@ -24,6 +24,9 @@ brew install --cask font-meslo-lg-nerd-font
 brew install shellcheck
 brew install fish
 
+## Docker
+brew install --cask docker
+
 ## Neovim
 brew install neovim
 
