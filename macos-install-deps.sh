@@ -67,3 +67,4 @@ brew install tokei
 brew install topgrade
 brew install zellij
 brew install zoxide
+brew install fzf
