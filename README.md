@@ -1,13 +1,9 @@
-# Dotfiles
+# dotfiles
 
-## Install Dependencies
+> dev setup using brew and GNU stow
 
-`./macos-install-deps.sh`
-
-## Setup Environment
-
-`./macos-setup-env.sh`
-
-## Clean Environment
-
-`./macos-clean-env.sh`
+```
+./macos-install-deps.sh
+./macos-setup-env.sh
+./macos-clean-env.sh
+```
