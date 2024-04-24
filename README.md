@@ -1,10 +1,13 @@
-# Wilfried Barth's Dotfiles
+# Dotfiles
 
-## Setup
+## Install Dependencies
 
-TBD
+`./macos-install-deps.sh`
 
-### Alacritty
+## Setup Environment
 
-TBD
+`./macos-setup-env.sh`
 
+## Clean Environment
+
+`./macos-clean-env.sh`
