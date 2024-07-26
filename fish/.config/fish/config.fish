@@ -43,9 +43,6 @@ alias ps procs
 # alias sed to sd (https://github.com/chmln/sd)
 alias sed sd
 
-# init fnm
-fnm env --use-on-cd | source
-
 # init pyenv
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 set -Ux PYENV_ROOT $HOME/.pyenv
