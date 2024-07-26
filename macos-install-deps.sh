@@ -31,7 +31,7 @@ brew install --cask docker
 brew install neovim
 
 ## Node.js
-brew install fnm
+brew install volta
 brew install pnpm
 
 ## Python
@@ -51,7 +51,7 @@ brew install bat
 brew install bottom
 brew install broot
 brew install dust
-brew install exa
+brew install lsd
 brew install fd
 brew install git-delta
 brew install kdash-rs/kdash/kdash

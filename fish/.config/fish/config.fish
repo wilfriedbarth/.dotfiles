@@ -32,7 +32,7 @@ set -Ux BAT_THEME ansi
 alias du dust
 
 # alias ls to exa (https://the.exa.website/)
-alias ls='exa --git --icons --color=always --group-directories-first'
+alias ls='lsd --git --color=always --group-directories-first'
 
 # alias find to fd (https://github.com/sharkdp/fd)
 alias find fd
