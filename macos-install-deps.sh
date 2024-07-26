@@ -3,11 +3,11 @@
 # Check to see if Homebrew is installed and install if missing.
 
 if [ "$(command -v brew)" = "" ]; then
-	echo "Installing Homebrew"
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
-	echo "Updating Homebrew"
-	brew update
+  echo "Updating Homebrew"
+  brew update
 fi
 
 # Install packages with Homebrew
@@ -23,6 +23,9 @@ brew install --cask font-meslo-lg-nerd-font
 ## Shell
 brew install shellcheck
 brew install fish
+
+## Git
+brew install lazygit
 
 ## Docker
 brew install --cask docker
