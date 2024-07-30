@@ -27,6 +27,9 @@ brew install fish
 ## Git
 brew install lazygit
 
+## Lua
+brew install luarocks
+
 ## Docker
 brew install --cask docker
 
@@ -35,7 +38,6 @@ brew install neovim
 
 ## Node.js
 brew install volta
-brew install pnpm
 
 ## Python
 brew install pyenv
