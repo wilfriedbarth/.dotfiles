@@ -12,6 +12,9 @@ fi
 
 # Install packages with Homebrew
 
+## Keyboard Shortcuts
+brew install --cask karabiner-elements
+
 ## Symlinking
 brew install stow
 
