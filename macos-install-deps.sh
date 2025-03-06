@@ -12,6 +12,11 @@ fi
 
 # Install packages with Homebrew
 
+## JetBrains
+brew install --cask jetbrains-toolbox
+brew install --cask intellij-idea-ce
+brew install --cask pycharm-ce
+
 ## Keyboard Shortcuts
 brew install --cask karabiner-elements
 
@@ -33,8 +38,10 @@ brew install lazygit
 ## Lua
 brew install luarocks
 
-## Docker
+## docker
 brew install --cask docker
+brew install --cask orbstack
+brew install jesseduffield/lazydocker/lazydocker
 
 ## Neovim
 brew install neovim
@@ -44,6 +51,7 @@ brew install volta
 
 ## Python
 brew install pyenv
+brew install --cask anaconda
 
 ## Golang
 brew tap tj/mmake https://github.com/tj/mmake.git
@@ -76,3 +84,7 @@ brew install topgrade
 brew install zellij
 brew install zoxide
 brew install fzf
+
+## LaTeX
+brew install --cask mactex
+brew install --cask textstudio

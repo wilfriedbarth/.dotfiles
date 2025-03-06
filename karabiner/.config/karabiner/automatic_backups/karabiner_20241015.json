@@ -58,7 +58,6 @@
                     },
                     {
                         "description": "Change caps lock to hyper key",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -126,7 +125,6 @@
                     },
                     {
                         "description": "Change right_shift + left_shift to caps_lock",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -165,7 +163,7 @@
                     "treat_as_built_in_keyboard": true
                 }
             ],
-            "name": "WB MBPro",
+            "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }

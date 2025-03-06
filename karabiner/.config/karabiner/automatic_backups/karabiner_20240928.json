@@ -58,7 +58,6 @@
                     },
                     {
                         "description": "Change caps lock to hyper key",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -125,16 +124,19 @@
                         ]
                     },
                     {
-                        "description": "Change right_shift + left_shift to caps_lock",
-                        "enabled": false,
+                        "description": "Change double tap right ⇧ key to caps lock",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": ["right_shift"],
-                                        "optional": ["caps_lock"]
+                                "conditions": [
+                                    {
+                                        "name": "right_shift pressed",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "caps_lock" }],
                                 "type": "basic"
@@ -142,12 +144,35 @@
                             {
                                 "from": {
                                     "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift"],
-                                        "optional": ["caps_lock"]
-                                    }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "caps_lock" }],
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "right_shift pressed",
+                                            "value": 1
+                                        }
+                                    },
+                                    { "key_code": "right_shift" }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "right_shift pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "right_shift pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -163,11 +188,26 @@
                         "vendor_id": 1133
                     },
                     "treat_as_built_in_keyboard": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 21265,
+                        "vendor_id": 12851
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 21265,
+                        "vendor_id": 12851
+                    },
+                    "ignore": false
                 }
             ],
-            "name": "WB MBPro",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+            "name": "Default profile",
+            "selected": true
         }
     ]
 }
