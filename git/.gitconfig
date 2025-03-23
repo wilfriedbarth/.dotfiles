@@ -3,6 +3,7 @@
   email = wilfried.barth.prof@gmail.com 
 [init]
 	defaultBranch = main
+	templatedir = ~/.git-templates
 [pull]
 	rebase = true
 [fetch]
