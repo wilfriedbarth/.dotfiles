@@ -10,3 +10,5 @@ for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
 done
 
 volta setup
+
+brew autoupdate start --upgrade --cleanup --immediate --sudo

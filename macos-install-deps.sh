@@ -12,6 +12,10 @@ fi
 
 # Install packages with Homebrew
 
+## homebrew auto update
+brew install pinentry-mac
+brew tap homebrew/autoupdate
+
 ## JetBrains
 brew install --cask jetbrains-toolbox
 brew install --cask intellij-idea-ce
@@ -87,4 +91,7 @@ brew install fzf
 
 ## LaTeX
 brew install --cask mactex
-brew install --cask textstudio
+brew install --cask texstudio
+
+# opencommit
+npm install -g opencommit

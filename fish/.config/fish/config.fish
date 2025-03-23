@@ -70,3 +70,6 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 # Setting PATH for Python 3.12
 # The original version is saved in /Users/wilfriedbarth/.config/fish/config.fish.pysave
 set -x PATH "/Library/Frameworks/Python.framework/Versions/3.12/bin" "$PATH"
+
+# Added by Windsurf
+fish_add_path /Users/wilfriedbarth/.codeium/windsurf/bin
