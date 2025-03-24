@@ -55,6 +55,9 @@ zoxide init fish | source
 # alias cd to z (https://github.com/ajeetdsouza/zoxide)
 alias cd z
 
+# alias lg to lazygit (https://github.com/jesseduffield/lazygit)
+alias lg lazygit
+
 # init starship
 starship init fish | source
 
