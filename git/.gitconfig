@@ -3,7 +3,6 @@
   email = wilfried.barth.prof@gmail.com 
 [init]
 	defaultBranch = main
-	templatedir = ~/.git-templates
 [pull]
 	rebase = true
 [fetch]
@@ -13,6 +12,7 @@
   colorMoved = zebra
 [core]
   pager = delta
+	excludesfile = /Users/wilfriedbarth/.gitignore
 [interactive]
   diffFilter = delta --color-only
 [delta]

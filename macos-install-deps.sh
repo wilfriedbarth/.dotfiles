@@ -42,7 +42,7 @@ brew install lazygit
 ## Lua
 brew install luarocks
 
-## docker
+## Docker
 brew install --cask docker
 brew install --cask orbstack
 brew install jesseduffield/lazydocker/lazydocker
@@ -52,6 +52,9 @@ brew install neovim
 
 ## Node.js
 brew install volta
+
+## Install lazynpm
+brew install jesseduffield/lazynpm/lazynpm
 
 ## Python
 brew install pyenv

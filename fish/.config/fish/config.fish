@@ -55,8 +55,14 @@ zoxide init fish | source
 # alias cd to z (https://github.com/ajeetdsouza/zoxide)
 alias cd z
 
-# alias lg to lazygit (https://github.com/jesseduffield/lazygit)
-alias lg lazygit
+# alias lzg to lazygit (https://github.com/jesseduffield/lazygit)
+alias lzg lazygit
+
+# alias lzd to lazydocker (https://github.com/jesseduffield/lazydocker)
+alias lzd lazydocker
+
+# alias lzn to lazynpm (https://github.com/)
+alias lzn lazynpm
 
 # init starship
 starship init fish | source
@@ -76,3 +82,7 @@ set -x PATH "/Library/Frameworks/Python.framework/Versions/3.12/bin" "$PATH"
 
 # Added by Windsurf
 fish_add_path /Users/wilfriedbarth/.codeium/windsurf/bin
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
