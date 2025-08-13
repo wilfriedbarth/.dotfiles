@@ -98,3 +98,6 @@ brew install --cask texstudio
 
 # opencommit
 npm install -g opencommit
+
+# claude-code
+npm install -g @anthropic-ai/claude-code
