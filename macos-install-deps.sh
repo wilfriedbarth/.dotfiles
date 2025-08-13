@@ -96,8 +96,10 @@ brew install fzf
 brew install --cask mactex
 brew install --cask texstudio
 
+# AI
+brew install claude-code
+brew install gemini-cli
+brew install codex
+
 # opencommit
 npm install -g opencommit
-
-# claude-code
-npm install -g @anthropic-ai/claude-code
