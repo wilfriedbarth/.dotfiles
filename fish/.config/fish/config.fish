@@ -43,6 +43,9 @@ alias ps procs
 # alias sed to sd (https://github.com/chmln/sd)
 alias sed sd
 
+# alias tealdeer to tldr
+alias tldr='tldr --color always'
+
 # ---- zoxide (better cd) ----
 zoxide init fish | source
 alias cd z
@@ -63,3 +66,5 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 # uv
 fish_add_path "/Users/wilfriedbarth/.local/bin"
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH

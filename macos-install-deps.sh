@@ -1,107 +1,34 @@
 #!/bin/sh
 
 # Check to see if Homebrew is installed and install if missing.
-
-if [ "$(command -v brew)" = "" ]; then
-  echo "Installing Homebrew"
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Add brew to PATH (Apple Silicon or Intel)
+  if [ -d /opt/homebrew/bin ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [ -d /usr/local/bin ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
 else
-  echo "Updating Homebrew"
+  echo "Updating Homebrew..."
   brew update
 fi
 
 # Install packages with Homebrew
-
-## homebrew auto update
-brew install pinentry-mac
 brew tap homebrew/autoupdate
-
-## JetBrains
-brew install --cask jetbrains-toolbox
-brew install --cask intellij-idea-ce
-brew install --cask pycharm-ce
-
-## Keyboard Shortcuts
-brew install --cask karabiner-elements
-
-## Symlinking
-brew install stow
-
-## Fonts
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font
-brew install --cask font-meslo-lg-nerd-font
-
-## Shell
-brew install shellcheck
-brew install fish
-
-## Git
-brew install lazygit
-
-## Lua
-brew install luarocks
-
-## Docker
-brew install --cask docker
-brew install --cask orbstack
-brew install jesseduffield/lazydocker/lazydocker
-
-## Neovim
-brew install neovim
-
-## Node.js
-brew install volta
-
-## Install lazynpm
-brew install jesseduffield/lazynpm/lazynpm
-
-## Python
-brew install uv
-
-## Golang
 brew tap tj/mmake https://github.com/tj/mmake.git
-brew install tj/mmake/mmake
+brew install pinentry-mac stow shellcheck fish lazygit neovim luarocks volta \
+  jesseduffield/lazynpm/lazynpm uv awscli bat bottom broot dust lsd fd \
+  git-delta kdash-rs/kdash/kdash monolith procs ripgrep ripsecrets \
+  rm-improved sd starship tealdeer tokei topgrade zellij zoxide fzf tj/mmake/mmake
+brew install --cask \
+  font-fira-code-nerd-font font-meslo-lg-nerd-font \
+  jetbrains-toolbox docker orbstack alacritty
 
-## Rust (treasure chest of replacements - terminal, cli, prompt, and more)
-##
-## https://github.com/sts10/rust-command-line-utilities
-## https://deepu.tech/rust-terminal-tools-linux-mac-windows-fish-zsh/
-## https://itsfoss.com/rust-cli-tools/
-brew install --cask --no-quarantine alacritty
-brew install bat
-brew install bottom
-brew install broot
-brew install dust
-brew install lsd
-brew install fd
-brew install git-delta
-brew install kdash-rs/kdash/kdash
-brew install monolith
-brew install procs
-brew install ripgrep
-brew install ripsecrets
-brew install rm-improved
-brew install sd
-brew install starship
-brew install tealdeer
-brew install tokei
-brew install topgrade
-brew install zellij
-brew install zoxide
-brew install fzf
+# Cleanup old packages and enable autoupdate for Homebrew
+brew cleanup
+brew autoupdate stop >/dev/null 2>&1 || true
+brew autoupdate start --upgrade --cleanup --immediate
 
-## LaTeX
-brew install --cask mactex
-brew install --cask texstudio
-
-# AI
-brew install claude-code
-brew install gemini-cli
-brew install codex
-
-# opencommit
-npm install -g opencommit
-
-# AWS
-brew install awscli
+echo "✅ Install complete! Run 'brew doctor' to verify your setup."

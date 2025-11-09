@@ -1,14 +1,23 @@
 #!/bin/sh
 
-# Symlink config folders
-STOW_FOLDERS="alacritty,fish,git,nvim,starship,zellij,karabiner,idea"
+# Symlink config folders from .dotfiles
+cd "$HOME/.dotfiles" || {
+  echo "Missing ~/.dotfiles"
+  exit 1
+}
 
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
-  echo "stow $folder"
-  stow -D $folder
-  stow $folder
+STOW_FOLDERS="alacritty fish git nvim starship zellij karabiner idea"
+
+for folder in $STOW_FOLDERS; do
+  echo "Restowing $folder..."
+  stow -D "$folder" 2>/dev/null || true
+  stow "$folder"
 done
 
-volta setup
+# Setup volta
+if command -v volta >/dev/null 2>&1; then
+  echo "Configuring Volta..."
+  volta setup
+fi
 
-brew autoupdate start --upgrade --cleanup --immediate --sudo
+echo "✅ Setup complete!"
