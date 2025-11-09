@@ -57,7 +57,7 @@ brew install volta
 brew install jesseduffield/lazynpm/lazynpm
 
 ## Python
-brew install pyenv
+brew install uv
 
 ## Golang
 brew tap tj/mmake https://github.com/tj/mmake.git
@@ -102,3 +102,6 @@ brew install codex
 
 # opencommit
 npm install -g opencommit
+
+# AWS
+brew install awscli
