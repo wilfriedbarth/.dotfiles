@@ -1,5 +1,0 @@
-" https://tegethoff.it/get-into-ideavim-configuration-from-basic-to-advanced
-
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Symlink config folders
-STOW_FOLDERS="alacritty fish git nvim starship zellij karabiner"
+# Symlink config folder
+STOW_FOLDERS="wezterm zellij fish startship nvim git"
 
 for folder in $STOW_FOLDERS; do
   echo "Removing $folder..."

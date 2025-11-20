@@ -6,7 +6,7 @@ cd "$HOME/.dotfiles" || {
   exit 1
 }
 
-STOW_FOLDERS="alacritty fish git nvim starship zellij karabiner idea"
+STOW_FOLDERS="wezterm zellij fish starship nvim git"
 
 for folder in $STOW_FOLDERS; do
   echo "Restowing $folder..."

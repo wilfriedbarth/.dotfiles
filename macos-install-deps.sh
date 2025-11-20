@@ -18,13 +18,17 @@ fi
 # Install packages with Homebrew
 brew tap homebrew/autoupdate
 brew tap tj/mmake https://github.com/tj/mmake.git
-brew install pinentry-mac stow shellcheck fish lazygit neovim luarocks volta \
-  jesseduffield/lazynpm/lazynpm uv awscli bat bottom broot dust lsd fd \
-  git-delta kdash-rs/kdash/kdash monolith procs ripgrep ripsecrets \
-  rm-improved sd starship tealdeer tokei topgrade zellij zoxide fzf tj/mmake/mmake
+brew tap sdkman/tap
+brew install pinentry-mac stow shellcheck fish lazygit \
+  neovim luarocks volta jesseduffield/lazynpm/lazynpm \
+  uv awscli bat bottom broot dust lsd fd git-delta \
+  kdash-rs/kdash/kdash monolith procs ripgrep ripsecrets \
+  rm-improved sd starship tealdeer tokei topgrade \
+  zellij zoxide fzf tj/mmake/mmake sdkman-cli
 brew install --cask \
   font-fira-code-nerd-font font-meslo-lg-nerd-font \
-  jetbrains-toolbox docker orbstack alacritty
+  jetbrains-toolbox docker orbstack wezterm cursor \
+  postman
 
 # Cleanup old packages and enable autoupdate for Homebrew
 brew cleanup
