@@ -1,0 +1,25 @@
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.pysave
+*.swp
+*.tmp
+*~
+
+# Editor temporary files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Fish shell runtime files
+fish/.config/fish/fish_variables
+
+# Neovim runtime files
+nvim/.config/nvim/lazy-lock.json

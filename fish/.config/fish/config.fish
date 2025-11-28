@@ -21,6 +21,14 @@ alias vim nvim
 set -gx GOPATH (go env GOPATH)
 set -gx PATH $PATH (go env GOPATH)/bin
 
+# setup ruby
+set -gx RBENV_ROOT ~/.rbenv
+status is-interactive; and . (rbenv init -|psub)
+
+# setup python
+source .venv/bin/activate.fish
+set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
+
 # alias make to mmake (https://github.com/tj/mmake)
 alias make mmake
 
@@ -58,13 +66,18 @@ alias lzn lazynpm
 # ---- starship prompt ----
 starship init fish | source
 
-# ---- Windsurf ----
-fish_add_path /Users/wilfriedbarth/.codeium/windsurf/bin
-
 # ---- OrbStack integration ----
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+if test -f "$HOME/.orbstack/shell/init2.fish"
+    source "$HOME/.orbstack/shell/init2.fish"
+end
 
-# uv
-fish_add_path "/Users/wilfriedbarth/.local/bin"
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+# ---- uv (Python package manager) ----
+if test -d "$HOME/.local/bin"
+    fish_add_path "$HOME/.local/bin"
+end
+
+# ---- Volta (Node.js version manager) ----
+if test -d "$HOME/.volta"
+    set -gx VOLTA_HOME "$HOME/.volta"
+    fish_add_path "$VOLTA_HOME/bin"
+end
