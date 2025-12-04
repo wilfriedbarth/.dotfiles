@@ -48,6 +48,7 @@ log_info "Adding Homebrew taps..."
 brew tap homebrew/autoupdate
 brew tap tj/mmake https://github.com/tj/mmake.git
 brew tap sdkman/tap
+brew tap common-fate/granted
 log_success "Taps added"
 
 # Install CLI tools
@@ -62,6 +63,7 @@ brew install \
   fish \
   fzf \
   git-delta \
+  granted \
   kdash-rs/kdash/kdash \
   lazygit \
   jesseduffield/lazynpm/lazynpm \
