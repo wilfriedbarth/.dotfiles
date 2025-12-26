@@ -26,7 +26,7 @@ set -gx RBENV_ROOT ~/.rbenv
 status is-interactive; and . (rbenv init -|psub)
 
 # setup python
-source .venv/bin/activate.fish
+source ~/.venv/bin/activate.fish
 set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
 
 # alias make to mmake (https://github.com/tj/mmake)
